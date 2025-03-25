@@ -32,13 +32,7 @@ return {
   {
     'github/copilot.vim',
   },
-  {
-    'lukas-reineke/indent-blankline.nvim',
-    main = 'ibl',
-    opts = function()
-      require('ibl').setup {}
-    end,
-  },
+  --  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = function() require('ibl').setup {} end, },
   {
     -- If you want neo-tree's file operations to work with LSP (updating imports, etc.), you can use a plugin like
     -- https://github.com/antosha417/nvim-lsp-file-operations:
@@ -450,5 +444,37 @@ return {
       -- Lightline colorscheme (if using lightline)
       vim.g.lightline = { colorscheme = 'everforest' }
     end,
+  },
+  {
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {
+        theme = 'hyper',
+        config = {
+          week_header = {
+            enable = true,
+          },
+          shortcut = {
+            { desc = '󰊳 Update', group = '@property', action = 'Lazy update', key = 'u' },
+            {
+              icon = ' ',
+              icon_hl = '@variable',
+              desc = 'Files',
+              group = 'Label',
+              action = 'Telescope find_files',
+              key = 'f',
+            },
+            {
+              desc = 'dotfiles',
+              group = 'Number',
+              action = 'edit ~/.config/nvim/lua/custom/plugins/init.lua',
+              key = 'd',
+            },
+          },
+        },
+      }
+    end,
+    dependencies = { { 'nvim-tree/nvim-web-devicons' } },
   },
 }
