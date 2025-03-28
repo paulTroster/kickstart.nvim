@@ -7,6 +7,7 @@ return {
   require 'custom.plugins.copilot',
   require 'custom.plugins.neo-tree',
   require 'custom.plugins.everforest',
-  require 'custom.plugins.dashboard',
   require 'custom.plugins.vgit',
+  require 'custom.plugins.indent_line',
+  require 'custom.plugins.lint',
 }
