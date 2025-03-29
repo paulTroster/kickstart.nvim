@@ -9,5 +9,5 @@ return {
   require 'custom.plugins.everforest',
   require 'custom.plugins.vgit',
   require 'custom.plugins.indent_line',
-  require 'custom.plugins.lint',
+  -- require 'custom.plugins.lint',
 }

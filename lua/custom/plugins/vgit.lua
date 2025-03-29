@@ -4,6 +4,12 @@ return {
   -- Lazy loading on 'VimEnter' event is necessary.
   event = 'VimEnter',
   config = function()
-    require('vgit').setup()
+    require('vgit').setup {
+      settings = {
+        live_blame = {
+          enabled = false,
+        },
+      },
+    }
   end,
 }
