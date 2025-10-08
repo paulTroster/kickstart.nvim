@@ -5,9 +5,10 @@ return {
   require 'custom.plugins.vim-be-good',
   require 'custom.plugins.autopairs',
   require 'custom.plugins.copilot',
-  require 'custom.plugins.neo-tree',
+  -- require 'custom.plugins.neo-tree',
   require 'custom.plugins.everforest',
   require 'custom.plugins.vgit',
   require 'custom.plugins.indent_line',
   -- require 'custom.plugins.lint',
+  require 'custom.plugins.copilotChat',
 }
