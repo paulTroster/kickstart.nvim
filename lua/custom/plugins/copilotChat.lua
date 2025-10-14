@@ -1,6 +1,9 @@
 return {
   {
     'CopilotC-Nvim/CopilotChat.nvim',
+    config = function()
+      vim.keymap.set('n', '<leader>h', ':CopilotChat<CR>', { noremap = false, silent = true })
+    end,
     dependencies = {
       { 'nvim-lua/plenary.nvim', branch = 'master' },
     },
