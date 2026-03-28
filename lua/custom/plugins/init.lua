@@ -10,4 +10,5 @@ return {
   require 'custom.plugins.indent_line',
   -- require 'custom.plugins.lint',
   require 'custom.plugins.copilotChat',
+  require 'custom.plugins.comment',
 }
